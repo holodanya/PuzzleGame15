@@ -37,19 +37,6 @@ function isSolvable(array) {
     return N % 2 === 0;
 }
 
-function countInversions(array) {
-    const flatArray = array.filter((item) => item !== "");
-    let inversions = 0;
-    for (let i = 0; i < flatArray.length; i++) {
-        for (let j = i + 1; j < flatArray.length; j++) {
-            if (flatArray[i] > flatArray[j]) {
-                inversions++;
-            }
-        }
-    }
-    return inversions;
-}
-
 function render() {
     gameContainer.innerHTML = "";
     tiles.forEach((tile, index) => {
